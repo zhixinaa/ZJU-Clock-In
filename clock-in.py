@@ -8,6 +8,7 @@ import re
 import datetime
 import time
 import sys
+import random
 
 
 class DaKa(object):
@@ -133,6 +134,9 @@ class DecodeError(Exception):
 
 
 def main(username, password):
+    randtime = random.random()*100
+    time.sleep(randtime)
+    
     """Hit card process
 
     Arguments:
