@@ -8,6 +8,7 @@ import re
 import datetime
 import time
 import sys
+import random
 
 
 class ClockIn(object):
@@ -184,6 +185,7 @@ def main(username, password):
 
 
 if __name__ == "__main__":
+    time.sleep((random.random()*1000))
     username = sys.argv[1]
     password = sys.argv[2]
     try:
