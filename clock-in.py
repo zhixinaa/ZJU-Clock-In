@@ -96,10 +96,10 @@ class ClockIn(object):
         new_info['number'] = number
         new_info["date"] = self.get_date()
         new_info["created"] = round(time.time())
-        new_info["address"] = "山西省忻州市忻府区"
-        new_info["area"] = "山西省 忻州市 忻府区"
-        #new_info["address"] = "浙江省宁波市鄞州区"
-        #new_info["area"] = "浙江省 宁波市 鄞州区"
+#         new_info["address"] = "山西省忻州市忻府区"
+#         new_info["area"] = "山西省 忻州市 忻府区"
+        new_info["address"] = "浙江省宁波市鄞州区"
+        new_info["area"] = "浙江省 宁波市 鄞州区"
         new_info["province"] = new_info["area"].split(' ')[0]
         new_info["city"] = new_info["area"].split(' ')[1]
         # form change
