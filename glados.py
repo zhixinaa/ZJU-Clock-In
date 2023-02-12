@@ -50,9 +50,10 @@ def main_handler(event, context):
 
 
 if __name__ == "__main__":
+    # print(sys.argv[1:])
     sckey = sys.argv[1]
     cookie = ''
-    for i in sys.argv[2:]:
+    for i in sys.argv[1:]:
         cookie = cookie+' '+i
     print(cookie)
     try:
