@@ -52,9 +52,8 @@ def main_handler(event, context):
 if __name__ == "__main__":
     # print(sys.argv[1:])
     sckey = sys.argv[1]
-    cookie = ''
-    for i in sys.argv[1:]:
-        cookie = cookie+' '+i
+    cookie = sys.argv[2].replace(";","; ")
+    
     print(cookie)
     try:
         start(sckey, cookie)
