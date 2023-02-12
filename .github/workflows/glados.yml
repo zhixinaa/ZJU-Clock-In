@@ -10,7 +10,7 @@ on:
     - cron: 0 */12 * * *
 
 jobs:
-  ClockIn:
+  glados:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
@@ -28,4 +28,4 @@ jobs:
           SCKEY: ${{ secrets.SCKEY }}
           COOKIE: ${{ secrets.COOKIE }}
         run: |
-          python3 glados.py ${SCKEY} ${COOKIE} 
+          python3 glados.py ${SCKEY} ${COOKIE} ${EAI_SESS}
