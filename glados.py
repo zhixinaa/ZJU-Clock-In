@@ -52,7 +52,6 @@ def main_handler(event, context):
 if __name__ == "__main__":
     sckey = sys.argv[1]
     cookie = sys.argv[2]
-    print(sys.argv[1:])
     try:
         start(sckey, cookie)
     except Exception:
