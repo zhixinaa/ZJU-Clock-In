@@ -1,0 +1,31 @@
+name: glados
+
+on:
+  push:
+    branches: 
+      - master
+  watch:
+    types: started
+  schedule:
+    - cron: 0 */12 * * *
+
+jobs:
+  ClockIn:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Setup Python
+        uses: actions/setup-python@v3.1.0
+        with:
+          python-version: 3.9
+      - name: Install packages
+        run: |
+          pip3 install requests
+      - name: Clock In
+        env:
+          SCKEY: ${{ secrets.SCKEY }}
+          COOKIE: ${{ secrets.COOKIE }}
+        run: |
+          python3 glados.py ${SCKEY} ${COOKIE} 
