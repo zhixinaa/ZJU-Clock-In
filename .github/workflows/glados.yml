@@ -26,6 +26,6 @@ jobs:
       - name: Clock In
         env:
           SCKEY: ${{ secrets.SCKEY }}
-          COOKIE: "${{ secrets.COOKIE }}"
+          COOKIE: ${{ secrets.COOKIE }}
         run: |
-          python3 glados.py ${SCKEY} ${COOKIE}
+          python3 glados.py ${SCKEY} "${COOKIE}"
