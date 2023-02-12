@@ -53,7 +53,7 @@ if __name__ == "__main__":
     sckey = sys.argv[1]
     cookie = ''
     for i in sys.argv[2:]:
-        cookie = cookie+i
+        cookie = cookie+' '+i
     print(cookie)
     try:
         start(sckey, cookie)
